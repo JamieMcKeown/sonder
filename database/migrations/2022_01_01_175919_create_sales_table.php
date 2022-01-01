@@ -15,6 +15,9 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
+            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('product_id')->references('id')->on('products');
+
             $table->timestamps();
         });
     }
