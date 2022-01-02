@@ -14,10 +14,11 @@ class CreateSalesTable extends Migration
     public function up()
     {
         Schema::create('sales', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('client_id')->unsigned();
             $table->foreign('client_id')->references('id')->on('clients');
+            $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
-
             $table->timestamps();
         });
     }

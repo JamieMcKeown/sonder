@@ -15,10 +15,10 @@ class CreateClientsTable extends Migration
     public function up()
     {
         Schema::create('clients', function (Blueprint $table) {
-            $table->id();
-            $table->string('first_name', 50);
-            $table->string('last_name', 50);
-            $table->int('quantity');
+            $table->increments('id');
+            $table->string('first_name', 50)->nullable();
+            $table->string('last_name', 50)->nullable();
+            $table->integer('quantity');
             $table->string('city', 50);
             $table->string('province_state', 50);
             $table->string('country', 50);
