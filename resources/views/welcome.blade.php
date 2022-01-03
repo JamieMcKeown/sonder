@@ -23,13 +23,13 @@
         </nav>
 
         <!-- main -->
-        <div class="container-fluid" style="padding-top:20%">
-            <div class="card m-auto" style="width: 55%">
-                <img src="/img/fbBack.jpg" class="card-img-top">
+        <div class="container-fluid" style="padding-top:150px">
+            <div class="card m-auto w-50">
+                <img src="/img/drink.jpg" class="card-img-top" style="max-height:400px">
                 <div class="card-body">
                     <h5 class="card-title">Sonder Tonic</h5>
                     <p class="card-text">The most delicious mix of Sangria and Tonic Water</p>
-                    <a href="#" class="btn btn-primary">Buy</a>
+                    <a href="/order" class="btn btn-danger">Buy</a>
                 </div>
             </div>
         </div>
