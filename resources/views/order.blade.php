@@ -24,32 +24,33 @@
 
         <!-- main -->
         <div class="container" style="padding-top:100px">
-            <form action="{{ action('SaleController@index') }}" method="POST">
+            <form action="order" method="POST">
+            @csrf
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="firstName">
-                    <div id="emailHelp" class="form-text">optional</div>
+                    <label for="first_name" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName">
+                    <div  class="form-text">optional</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="lastName">
-                    <div id="emailHelp" class="form-text">optional</div>
+                    <label for="last_name" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName">
+                    <div  class="form-text">optional</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Quantity</label>
-                    <input type="number" class="form-control" id="quantity">         
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" value="1" class="form-control" id="quantity" name="quantity" required>         
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">City</label>
-                    <input type="text" class="form-control" id="city">                   
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" name="city" required>                   
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Province/State</label>
-                    <input type="text" class="form-control" id="provState">         
+                    <label for="prov_state" class="form-label">Province/State</label>
+                    <input type="text" class="form-control" id="provState" name="provState" required>         
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Country</label>
-                    <input type="text" class="form-control" id="country">                   
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="country" name="country" required>                   
                 </div>               
                 <button type="submit" class="btn btn-danger">Pay me later</button>
             </form>
