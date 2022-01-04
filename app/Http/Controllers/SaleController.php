@@ -25,6 +25,22 @@ class SaleController extends Controller
     public function handle(Request $request)
     {
         $data = $request->input();
+
+        if ($data['firstName']) {
+            $data['firstName'] = $data['firstName'];
+        } else {
+            $data['firstName'] = 'Francis';
+        }
+
+        if ($data['lastName']) {
+            $data['lastName'] = $data['lastName'];
+        } else {
+            $data['lastName'] = 'Davison';
+        }
+
+        //confirmation number
+        $data['confirmationNumber'] = strrev($data['firstName']) . rand(0, 100);
+
         return view('result')->with('data', $data);
         
     }

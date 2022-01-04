@@ -28,17 +28,17 @@
             @csrf
                 <div class="mb-3">
                     <label for="first_name" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="firstName" name="firstName">
+                    <input type="text" class="form-control" id="firstName" name="firstName" >
                     <div  class="form-text">optional</div>
                 </div>
                 <div class="mb-3">
                     <label for="last_name" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="lastName" name="lastName">
+                    <input type="text" class="form-control" id="lastName" name="lastName" >
                     <div  class="form-text">optional</div>
                 </div>
                 <div class="mb-3">
                     <label for="quantity" class="form-label">Quantity</label>
-                    <input type="number" value="1" class="form-control" id="quantity" name="quantity" required>         
+                    <input type="number" value="1" class="form-control" id="quantity" name="quantity">         
                 </div>
                 <div class="mb-3">
                     <label for="city" class="form-label">City</label>
@@ -52,7 +52,12 @@
                     <label for="country" class="form-label">Country</label>
                     <input type="text" class="form-control" id="country" name="country" required>                   
                 </div>               
-                <button type="submit" class="btn btn-danger">Pay me later</button>
+                
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-danger">Pay me later</button>             
+                    <a class="btn btn-danger" href="{{ url('/') }}" role="button">Home</a>                   
+                </div>
             </form>
         </div>
         

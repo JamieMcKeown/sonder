@@ -23,21 +23,24 @@
         </nav>
 
         <!-- main -->
-        <div class="container justify-content-center" style="padding-top:100px">          
+        <div class="container text-center" style="padding-top:100px">          
                 <p class="fs-2">Confirmation</p>
+                <p class="fs-4"> Confirmation number : {{ $data['confirmationNumber'] }}</p>
                 <p class="fs-4"> First name : {{ $data['firstName'] }}</p>
                 <p class="fs-4">Last name : {{ $data['lastName'] }}</p>
                 <p class="fs-4">Quantity : {{ $data['quantity'] }}</p>
                 <p class="fs-4">City : {{ $data['city'] }}</p>
                 <p class="fs-4">Province/State : {{ $data['provState'] }}</p>
                 <p class="fs-4">Country : {{ $data['country'] }}</p>  
+                <div class="d-flex justify-content-center">               
+                    <a class="btn btn-danger" href="{{ url('/') }}" role="button">Home</a>
+                </div>
+                
         </div>
       
         <div class="container-fluid fixed-bottom mb-2 bg-danger color-white">
             <p class="fs-4 text-center" style="color:white">Jamie McKeown</p>
         </div>
        
-        
-
     </body>
 </html>

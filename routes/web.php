@@ -24,6 +24,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/order', [App\Http\Controllers\SaleController::class, 'index'])->name('order');
 Route::post('order', [App\Http\Controllers\SaleController::class, 'handle'])->name('orderpost');
 
-Route::get('/result', function () {
-    return view('result');
-});
+
